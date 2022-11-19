@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Manager manager = new Manager();
         Scanner scanner = new Scanner(System.in);
@@ -25,7 +26,7 @@ public class Main {
             command = scanner.nextInt();
 
             switch (command) {
-                case 1 -> System.out.println(me);
+                case 1 -> System.out.println(me.getProfileCard());
                 case 2 -> me = manager.inputMyData();
                 //case 3 -> ;
                 //case 4 -> ;

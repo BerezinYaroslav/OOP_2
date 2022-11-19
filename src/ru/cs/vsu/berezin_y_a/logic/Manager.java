@@ -3,9 +3,15 @@ package ru.cs.vsu.berezin_y_a.logic;
 import ru.cs.vsu.berezin_y_a.clint.Gender;
 import ru.cs.vsu.berezin_y_a.clint.Person;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Manager {
+public class Manager implements Managers {
+
+    List<Person> personList = new ArrayList<>();
+
+    @Override
     public void printMenu() {
         System.out.println("Выбери, что хотел бы сделать?");
         System.out.println("1 - Просмотреть свой профиль");
@@ -16,6 +22,13 @@ public class Manager {
         System.out.println("0 - Выйти");
     }
 
+    @Override
+    public List<Person> getRecommendations() {
+
+        return null;
+    }
+
+    @Override
     public Person inputMyData() {
         Scanner scanner = new Scanner(System.in);
         final String[] interests;

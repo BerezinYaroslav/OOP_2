@@ -4,12 +4,13 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Person {
-    public static int id = 0;
-    public final String firstName;
-    public final String lustName;
-    public final Integer age;
-    public final Gender gender;
-    public String[] interests;
+
+    private static int id = 0;
+    private final String firstName;
+    private final String lustName;
+    private final Integer age;
+    private final Gender gender;
+    private String[] interests;
 
     public Person(String firstName, String lustName, Integer age, Gender gender) {
         ++id;
@@ -80,6 +81,30 @@ public class Person {
         hash *= 31;
 
         return hash;
+    }
+
+    public static int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLustName() {
+        return lustName;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public String[] getInterests() {
+        return interests;
     }
 
     @Override
