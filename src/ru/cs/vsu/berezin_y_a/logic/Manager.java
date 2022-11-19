@@ -34,6 +34,10 @@ public class Manager implements Managers {
             }
         }
 
+        if (recommendList.size() == 0) {
+            System.out.println("Тебе никто не подошел...");
+        }
+
         return recommendList;
     }
 
@@ -44,6 +48,7 @@ public class Manager implements Managers {
         return "Найс коннект!";
     }
 
+    @Override
     public void connectMeWithSomebody(Scanner scanner, Person me) {
         System.out.print("Введите id человека: ");
         int id = scanner.nextInt();

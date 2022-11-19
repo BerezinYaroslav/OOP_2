@@ -28,7 +28,7 @@ public class Person {
     }
 
     public String getProfileCard() {
-        String profile = firstName + " " + lustName + ", " + age + ", " + gender;
+        String profile = firstName + " " + lustName + ", " + age + ", " + gender + ", id = " + id;
 
         if (this.interests != null) {
             profile += ", интересы: " + Arrays.toString(interests);
