@@ -5,10 +5,11 @@ import ru.cs.vsu.berezin_y_a.clint.Person;
 import java.util.List;
 
 public interface Managers {
-
     void printMenu();
 
-    Person inputMyData();
+    Person inputPersonData();
 
-    List<Person> getRecommendations();
+    List<Person> getRecommendations(Person me);
+
+    String connectPeople(Person person1, Person person2);
 }

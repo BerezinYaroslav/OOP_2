@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Person {
-
     private static int id = 0;
     private final String firstName;
     private final String lustName;
@@ -83,7 +82,7 @@ public class Person {
         return hash;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 
