@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Manager implements Managers {
-    public List<Person> personList = new ArrayList<>();
+    private List<Person> personList = new ArrayList<>();
 
     @Override
     public void printMenu() {
@@ -17,8 +17,7 @@ public class Manager implements Managers {
         System.out.println("2 - Изменить свой профиль");
         System.out.println("3 - Посмотреть рекомендации");
         System.out.println("4 - Проверить, подходит ли мне человек");
-        System.out.println("5 - Посмотреть историю просмотра");
-        System.out.println("6 - Добавить человека");
+        System.out.println("5 - Добавить человека");
         System.out.println("0 - Выйти");
     }
 
@@ -43,9 +42,17 @@ public class Manager implements Managers {
 
     @Override
     public String connectPeople(Person person1, Person person2) {
-        if (person1.equals(person2)) return "Человеку нужен ДРУГОЙ человек...";
-        if (person1.getGender().equals(person2.getGender())) return "Однополые браки в нашей стране запрещены!";
-        return "Найс коннект!";
+        String string = "Найс коннект!";
+
+        if (person1.equals(person2)) {
+            string = "Человеку нужен ДРУГОЙ человек...";
+        }
+
+        if (person1.getGender().equals(person2.getGender())) {
+            string = "Однополые браки в нашей стране запрещены!";
+        }
+
+        return string;
     }
 
     @Override
@@ -95,5 +102,10 @@ public class Manager implements Managers {
         }
 
         return new Person(name, surname, age, gender);
+    }
+
+    @Override
+    public void addPerson(Person person) {
+        personList.add(person);
     }
 }

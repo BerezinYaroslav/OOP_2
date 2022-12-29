@@ -15,4 +15,6 @@ public interface Managers {
     String connectPeople(Person person1, Person person2);
 
     void connectMeWithSomebody(Scanner scanner, Person me);
+
+    void addPerson(Person person);
 }
